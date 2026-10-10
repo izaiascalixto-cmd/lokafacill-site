@@ -1,0 +1,120 @@
+/*
+  Placa de orientação de rodovia: o único elemento forte da página. O resto é documento sóbrio.
+  Cores: verde-placa, branco-placa, asfalto (texto), meio-fio (fundo frio) e faixa amarela (só no divisor de pista).
+  Letra: Overpass, a versão livre da Highway Gothic das placas de estrada, em 400 e 800.
+  Layout: uma coluna alinhada à esquerda, até ~42rem; no celular, a placa ocupa a largura toda.
+*/
+:root {
+  --verde-placa: #0b6b3a;
+  --branco-placa: #ffffff;
+  --asfalto: #23272b;
+  --asfalto-suave: #555d63;
+  --meio-fio: #eef0eb;
+  --linha: #d3d8d0;
+  --faixa: #f2b705;
+  --link: #0b6b3a;
+  --fonte: "Overpass", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --asfalto: #edefea;
+    --asfalto-suave: #aeb6af;
+    --meio-fio: #1b1e21;
+    --linha: #343a3f;
+    --link: #8ad6ab;
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--meio-fio);
+  color: var(--asfalto);
+  font-family: var(--fonte);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+.pagina {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding-inline: 16px;
+  padding-block: 2rem 3rem;
+  display: grid;
+  gap: 2.25rem;
+}
+
+/* A placa: verde, borda branca por dentro, cantos de placa. */
+.placa {
+  background: var(--verde-placa);
+  color: var(--branco-placa);
+  border-radius: 0.75rem;
+  padding: 0.4rem;
+}
+.placa-miolo {
+  border: 3px solid var(--branco-placa);
+  border-radius: 0.5rem;
+  padding: 1.25rem 1.35rem 1.1rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 0.25rem 1.25rem;
+}
+.placa h1 {
+  margin: 0;
+  font-weight: 800;
+  font-size: clamp(2.4rem, 9vw, 3.9rem);
+  line-height: 0.95;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+.placa .destino { margin: 0; font-size: clamp(1.1rem, 3.5vw, 1.35rem); grid-column: 1; }
+.placa .destino a { color: inherit; }
+.placa svg { grid-column: 2; grid-row: 1 / span 2; width: clamp(5.5rem, 20vw, 8rem); height: auto; }
+.placa.pequena h1 { font-size: clamp(2rem, 7vw, 3rem); }
+
+/* A faixa amarela tracejada de pista: o divisor entre a placa e o texto. */
+.faixa {
+  height: 0.45rem;
+  background: repeating-linear-gradient(90deg, var(--faixa) 0 2.75rem, transparent 2.75rem 4.25rem);
+  border-radius: 1px;
+}
+
+h2 { font-weight: 800; font-size: 1.55rem; line-height: 1.2; margin: 0 0 0.55rem; text-wrap: balance; }
+h3 { font-weight: 800; font-size: 1.1rem; margin: 1.15rem 0 0.3rem; }
+section p { margin: 0 0 0.75rem; }
+section ul { margin: 0 0 0.75rem; padding-left: 1.2rem; display: grid; gap: 0.35rem; }
+
+/* Os dados da empresa: linhas de registro, sem cartão. */
+.registro { margin: 0; border-top: 2px solid var(--asfalto); }
+.registro div {
+  display: grid;
+  grid-template-columns: 9.5rem 1fr;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--linha);
+}
+.registro dt { color: var(--asfalto-suave); }
+.registro dd { margin: 0; min-width: 0; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+
+.atualizada { margin: 0; color: var(--asfalto-suave); }
+
+a { color: var(--link); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 3px solid var(--faixa); outline-offset: 2px; border-radius: 2px; }
+
+footer {
+  border-top: 1px solid var(--linha);
+  padding-top: 1.1rem;
+  color: var(--asfalto-suave);
+  font-size: 0.95rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+@media (max-width: 30rem) {
+  .registro div { grid-template-columns: 1fr; gap: 0; }
+  .placa-miolo { padding: 1rem 1rem 0.9rem; }
+}
