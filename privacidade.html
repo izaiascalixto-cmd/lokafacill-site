@@ -5,26 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Política de privacidade — LokaFácil Aluguel</title>
   <meta name="description" content="Como a LokaFácil Aluguel trata dados pessoais, na locação de motos e no atendimento pelo WhatsApp para empresas parceiras.">
+  <meta name="theme-color" content="#0b6b3a">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;800&display=swap">
   <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-  <main class="pagina">
-    <header class="placa pequena">
+  <svg width="0" height="0" class="oculto" aria-hidden="true">
+    <symbol id="seta" viewBox="0 0 40 48"><path d="M13 0h14v25h12L20 48 1 25h12z"/></symbol>
+  </svg>
+
+  <header class="portico">
+    <div class="placa pequena">
       <div class="placa-miolo">
-        <h1>Política de privacidade</h1>
-        <p class="destino"><a href="index.html">LokaFácil Aluguel</a></p>
+        <div class="marca">
+          <h1>Política de privacidade</h1>
+          <p class="destino"><a href="index.html">LokaFácil Aluguel</a></p>
+        </div>
+        <nav class="faixas" aria-label="Nesta página">
+          <a href="#exclusao"><span>Excluir meus dados</span><svg aria-hidden="true"><use href="#seta"/></svg></a>
+        </nav>
       </div>
-    </header>
-    <div class="faixa" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <main class="documento">
 
     <p class="atualizada">Como tratamos dados pessoais, de acordo com a Lei Geral de Proteção de Dados (Lei 13.709/2018). Atualizada em 9 de outubro de 2026.</p>
 
     <section aria-labelledby="t-quem">
       <h2 id="t-quem">1. Quem somos</h2>
-      <p><strong>M I Aluguel de Motocicletas Ltda</strong> (nome fantasia LokaFácil Aluguel), CNPJ 65.312.400/0001-88, Rua Antônio Andrade, 180, Recreio, Vitória da Conquista, BA, CEP 45020-230. Contato: <a href="mailto:locafacill@gmail.com">locafacill@gmail.com</a> ou (77) 9920-9558.</p>
+      <p><strong>M I Aluguel de Motocicletas Ltda</strong> (nome fantasia LokaFácil Aluguel), <span class="junto">CNPJ 65.312.400/0001-88</span>, Rua Antônio Andrade, 180, Recreio, Vitória da Conquista, BA, <span class="junto">CEP 45020-230</span>. Contato: <a href="mailto:locafacill@gmail.com">locafacill@gmail.com</a> ou <span class="junto">(77) 9920-9558</span>.</p>
       <p>Tratamos dados em dois papéis diferentes:</p>
       <ul>
         <li><strong>Na locação de motos</strong>, somos a <strong>controladora</strong> dos dados dos nossos clientes.</li>
@@ -93,10 +106,11 @@
       <p>Para qualquer dúvida sobre privacidade, ou para exercer seus direitos: <a href="mailto:locafacill@gmail.com">locafacill@gmail.com</a>.</p>
     </section>
 
-    <footer>
-      <span>© 2026 M I Aluguel de Motocicletas Ltda, CNPJ 65.312.400/0001-88</span>
-      <a href="index.html">Página inicial</a>
-    </footer>
   </main>
+
+  <footer class="acostamento">
+    <span>© 2026 M I Aluguel de Motocicletas Ltda, CNPJ 65.312.400/0001-88</span>
+    <a href="index.html">Página inicial</a>
+  </footer>
 </body>
 </html>

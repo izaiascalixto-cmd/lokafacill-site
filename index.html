@@ -5,58 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LokaFácil Aluguel | Aluguel de motos em Vitória da Conquista</title>
   <meta name="description" content="LokaFácil Aluguel: aluguel de motos sem condutor em Vitória da Conquista, Bahia.">
+  <meta name="theme-color" content="#0b6b3a">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;800&display=swap">
   <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-  <main class="pagina">
-    <header class="placa">
-      <div class="placa-miolo">
-        <h1>LokaFácil Aluguel</h1>
-        <p class="destino">Aluguel de motos em Vitória da Conquista</p>
-        <svg viewBox="0 0 120 80" role="img" aria-label="Pictograma de moto" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="24" cy="58" r="13"/>
-          <circle cx="96" cy="58" r="13"/>
-          <path d="M24 58 L44 44"/>
-          <path d="M96 58 L83 30 L92 23"/>
-          <path fill="currentColor" stroke="none" d="M30 40 Q32 33 44 33 L62 29 Q76 27 85 34 L82 41 L50 46 Z"/>
-          <path fill="currentColor" stroke="none" d="M50 45 L74 41 L71 57 L55 59 Z"/>
-        </svg>
-      </div>
-    </header>
-    <div class="faixa" aria-hidden="true"></div>
+  <svg width="0" height="0" class="oculto" aria-hidden="true">
+    <symbol id="seta" viewBox="0 0 40 48"><path d="M13 0h14v25h12L20 48 1 25h12z"/></symbol>
+  </svg>
 
-    <section aria-labelledby="t-fazemos">
+  <header class="portico">
+    <div class="placa">
+      <div class="placa-miolo">
+        <div class="marca">
+          <h1>LokaFácil Aluguel</h1>
+          <p class="destino">Aluguel de motos em Vitória da Conquista</p>
+          <svg class="moto" viewBox="0 0 120 80" role="img" aria-label="Pictograma de moto" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="24" cy="58" r="13"/>
+            <circle cx="96" cy="58" r="13"/>
+            <path d="M24 58 L44 44"/>
+            <path d="M96 58 L83 30 L92 23"/>
+            <path fill="currentColor" stroke="none" d="M30 40 Q32 33 44 33 L62 29 Q76 27 85 34 L82 41 L50 46 Z"/>
+            <path fill="currentColor" stroke="none" d="M50 45 L74 41 L71 57 L55 59 Z"/>
+          </svg>
+        </div>
+        <nav class="faixas" aria-label="Nesta página">
+          <a href="#aluguel"><span>Aluguel de motos</span><svg aria-hidden="true"><use href="#seta"/></svg></a>
+          <a href="#whatsapp"><span>WhatsApp para empresas</span><svg aria-hidden="true"><use href="#seta"/></svg></a>
+          <a href="#empresa"><span>Dados da empresa</span><svg aria-hidden="true"><use href="#seta"/></svg></a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="pista">
+    <section id="aluguel" aria-labelledby="t-fazemos">
       <h2 id="t-fazemos">Moto para trabalhar ou se deslocar</h2>
       <p>A LokaFácil aluga motos sem condutor em Vitória da Conquista e região. Você retira a moto, usa pelo período combinado e devolve.</p>
       <p>Para saber modelos, valores e disponibilidade, fale com a gente pelo <a href="https://www.instagram.com/lokafacill/" rel="noopener">Instagram @lokafacill</a> ou pelo e-mail <a href="mailto:locafacill@gmail.com">locafacill@gmail.com</a>.</p>
     </section>
 
-    <section aria-labelledby="t-whatsapp">
+    <section id="whatsapp" aria-labelledby="t-whatsapp">
       <h2 id="t-whatsapp">Atendimento no WhatsApp para empresas</h2>
       <p>A LokaFácil também opera um serviço de atendimento automático pelo WhatsApp para empresas parceiras, conectado pela plataforma oficial do WhatsApp Business. As mensagens são tratadas em nome de cada empresa parceira, como explica a nossa <a href="privacidade.html">política de privacidade</a>.</p>
     </section>
 
-    <section aria-labelledby="t-empresa">
+    <section id="empresa" aria-labelledby="t-empresa">
       <h2 id="t-empresa">Dados da empresa</h2>
       <dl class="registro">
         <div><dt>Razão social</dt><dd>M I Aluguel de Motocicletas Ltda</dd></div>
         <div><dt>Nome fantasia</dt><dd>LokaFácil Aluguel</dd></div>
         <div><dt>CNPJ</dt><dd>65.312.400/0001-88</dd></div>
-        <div><dt>Endereço</dt><dd>Rua Antônio Andrade, 180, Recreio, Vitória da Conquista, BA, CEP 45020-230</dd></div>
-        <div><dt>Telefone</dt><dd>(77) 9920-9558</dd></div>
+        <div><dt>Endereço</dt><dd>Rua Antônio Andrade, 180, Recreio, Vitória da Conquista, BA, <span class="junto">CEP 45020-230</span></dd></div>
+        <div><dt>Telefone</dt><dd><a class="junto" href="tel:+557799209558">(77) 9920-9558</a></dd></div>
         <div><dt>E-mail</dt><dd><a href="mailto:locafacill@gmail.com">locafacill@gmail.com</a></dd></div>
         <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/lokafacill/" rel="noopener">@lokafacill</a></dd></div>
       </dl>
     </section>
-
-    <footer>
-      <span>© 2026 M I Aluguel de Motocicletas Ltda</span>
-      <a href="privacidade.html">Política de privacidade</a>
-      <a href="privacidade.html#exclusao">Excluir meus dados</a>
-    </footer>
   </main>
+
+  <footer class="acostamento">
+    <span>© 2026 M I Aluguel de Motocicletas Ltda</span>
+    <a href="privacidade.html">Política de privacidade</a>
+    <a href="privacidade.html#exclusao">Excluir meus dados</a>
+  </footer>
 </body>
 </html>
